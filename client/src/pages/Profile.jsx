@@ -157,7 +157,7 @@ export default function Profile() {
   }
   return (
     <div className="p-3 max-w-lg mx-auto">
-      <h1 className="text-3xl font-semibold text-center my-7">Profile</h1>
+      <h1 className="text-3xl font-semibold text-center my-5">Profile</h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
           onChange={(e) => setFile(e.target.files[0])}
@@ -255,7 +255,9 @@ export default function Profile() {
 
             <div className="flex flex-col items-center">
               <button onClick={()=> handleListingDelete(listing._id)} className="text-red-700 ">Delete</button>
+              <Link to={`/update-listing/${listing._id}`}>
               <button className="text-green-700 ">Edit</button>
+              </Link>
             </div>
 
             
