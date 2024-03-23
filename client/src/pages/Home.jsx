@@ -51,7 +51,7 @@ export default function Home() {
       {/* top */}
       <div className='flex flex-col gap-6 p-20 px-3 max-w-6xl mx-auto'>
         <h1 className='text-blue-950 font-bold text-3xl lg:text-6xl'>
-          Find your next <span className='text-blue-700'>perfect</span>
+          Find your next <span className='text-blue-800'>perfect</span>
           <br />
           place with ease
         </h1>
@@ -70,18 +70,17 @@ export default function Home() {
       </div>
 
       {/* swiper */}
-      <Swiper navigation>
+      <Swiper navigation className='border border-slate-400'>
         {offerListings &&
           offerListings.length > 0 &&
           offerListings.map((listing) => (
-            <SwiperSlide>
-              <div
+            <SwiperSlide key={listing._id}>
+              <div 
                 style={{
                   background: `url(${listing.imageUrls[0]}) center no-repeat`,
                   backgroundSize: 'cover',
                 }}
                 className='h-[500px]'
-                key={listing._id}
               ></div>
             </SwiperSlide>
           ))}
@@ -94,7 +93,7 @@ export default function Home() {
           <div className=''>
             <div className='my-3'>
               <h2 className='text-2xl font-semibold text-slate-600'>Recent offers</h2>
-              <Link className='text-sm text-blue-700 hover:underline' to={'/search?offer=true'}>Show more offers</Link>
+              <Link className='text-sm text-blue-900 hover:underline' to={'/search?offer=true'}>Show more offers</Link>
             </div>
             <div className='flex flex-wrap gap-4'>
               {offerListings.map((listing) => (

@@ -157,7 +157,7 @@ export default function Profile() {
   }
   return (
     <div className="p-3 max-w-lg mx-auto">
-      <h1 className="text-3xl font-semibold text-center my-5">Profile</h1>
+      <h1 className="text-3xl font-semibold text-center my-4">Profile</h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
           onChange={(e) => setFile(e.target.files[0])}
@@ -170,7 +170,7 @@ export default function Profile() {
           onClick={() => fileRef.current.click()}
           src={formData.avatar || currentUser.avatar}
           alt="profile"
-          className="rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2"
+          className="rounded-full h-28 w-28 object-cover cursor-pointer self-center "
         />
         <p className="text-sm self-center">
           {fileUploadError ? (
@@ -190,7 +190,7 @@ export default function Profile() {
           placeholder="username"
           defaultValue={currentUser.username}
           id="username"
-          className="border p-3 rounded-lg"
+          className="border p-3 rounded-lg  border-slate-500"
           onChange={handleChange}
         />
         <input
@@ -198,19 +198,19 @@ export default function Profile() {
           placeholder="email"
           defaultValue={currentUser.email}
           id="email"
-          className="border p-3 rounded-lg"
+          className="border p-3 rounded-lg border-slate-500"
           onChange={handleChange}
         />
         <input
           type="password"
           placeholder="password"
           id="password"
-          className="border p-3 rounded-lg"
+          className="border p-3 rounded-lg border-slate-500"
           onChange={handleChange}
         />
         <button
           disabled={loading}
-          className="bg-slate-700 text-white rounded-lg p-3 uppercase hover:opacity-90 disabled:opacity-80"
+          className="bg-blue-900 text-white rounded-lg p-3 uppercase hover:opacity-90 disabled:opacity-80"
         >
           {loading ? "Loading..." : "Update"}
         </button>
@@ -221,12 +221,12 @@ export default function Profile() {
       <div className="flex justify-between mt-5">
         <span
           onClick={handleDeleteUser}
-          className="text-red-700 cursor-pointer"
+          className="text-red-600 cursor-pointer"
         >
           {" "}
           Delete Account
         </span>
-        <span onClick={handleSignOut} className="text-red-700 cursor-pointer">
+        <span onClick={handleSignOut} className="text-red-600 cursor-pointer">
           {" "}
           Sign out
         </span>
@@ -235,8 +235,8 @@ export default function Profile() {
       <p className="text-green-700 mt-5">
         {updateSuccess ? "User is updated successfully!" : ""}
       </p>
-      <button onClick={handleShowListings} className="text-green-700 w-full">Show Listings</button>
-      <p className="text-red-700 mt-5">
+      <button onClick={handleShowListings} className="text-green-700 font-semibold w-full">Show Listings ⬇️</button>
+      <p className="text-red-600 mt-5">
         {showListingsError ? "Error showing listings!" : ""}
       </p>
 
@@ -244,7 +244,7 @@ export default function Profile() {
         <div className="flex flex-col gap-4">
           <h1 className="text-center mt-7 text-2xl font-semibold">Your Listings</h1>
         {userListings.map((listing) =>
-          <div key ={listing._id} className="border rounded-lg p-3 flex justify-between items-center gap-4">
+          <div key ={listing._id} className="border rounded-lg p-3 flex justify-between items-center gap-4 border-slate-500">
             <Link to={`/listing/${listing._id}`}>
               <img src={listing.imageUrls[0]} alt="listing cover" className="h-16 w-16 object-contain " />
             </Link>
@@ -254,9 +254,9 @@ export default function Profile() {
             </Link>
 
             <div className="flex flex-col items-center">
-              <button onClick={()=> handleListingDelete(listing._id)} className="text-red-700 ">Delete</button>
+              <button onClick={()=> handleListingDelete(listing._id)} className="text-red-600 ">Delete</button>
               <Link to={`/update-listing/${listing._id}`}>
-              <button className="text-green-700 ">Edit</button>
+              <button className="text-green-600 ">Edit</button>
               </Link>
             </div>
 

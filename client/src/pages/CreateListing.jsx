@@ -150,12 +150,12 @@ export default function CreateListing() {
         Create a Listing
       </h1>
 
-      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
-        <div className="flex flex-col gap-4 flex-1">
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 ">
+        <div className="flex flex-col gap-4 flex-1 ">
           <input
             type="text"
             placeholder="Name"
-            className="border p-3 rounded-lg"
+            className="border p-3 rounded-lg border-slate-500"
             id="name"
             maxLength="62"
             minLength="10"
@@ -166,7 +166,7 @@ export default function CreateListing() {
           <textarea
             type="text"
             placeholder="Description"
-            className="border p-3 rounded-lg"
+            className="border p-3 rounded-lg border-slate-500"
             id="description"
             required
             onChange={handleChange}
@@ -175,7 +175,7 @@ export default function CreateListing() {
           <input
             type="text"
             placeholder="Address"
-            className="border p-3 rounded-lg"
+            className="border p-3 rounded-lg border-slate-500"
             id="address"
             required
             onChange={handleChange}
@@ -214,7 +214,7 @@ export default function CreateListing() {
                 min="1"
                 max="10"
                 required
-                className="p-3 border border-gray-300 rounded-lg"
+                className="p-3 border border-slate-500 rounded-lg"
                 onChange={handleChange} value={formData.bedrooms}
               />
               <p>Beds</p>
@@ -226,7 +226,7 @@ export default function CreateListing() {
                 min="1"
                 max="10"
                 required
-                className="p-3 border border-gray-300 rounded-lg"
+                className="p-3 border border-slate-500 rounded-lg"
                 onChange={handleChange} value={formData.bathrooms}
               />
               <p>Baths</p>
@@ -238,10 +238,10 @@ export default function CreateListing() {
                 min="1000"
                 max="10000000"
                 required
-                className="p-3 border border-gray-300 rounded-lg"
+                className="p-3 border border-slate-500 rounded-lg "
                 onChange={handleChange} value={formData.regularPrice}
               />
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center ">
                 <p>Regular price</p>
                 {formData.type === 'rent' && (
                   <span className='text-xs'>(₹ / month)</span>
@@ -256,7 +256,7 @@ export default function CreateListing() {
                   min="0"
                   max="10000000"
                   required
-                  className="p-3 border border-gray-300 rounded-lg"
+                  className="p-3 border border-slate-500 rounded-lg"
                   onChange={handleChange} value={formData.discountPrice}
                 />
                 <div className="flex flex-col items-center">
@@ -291,7 +291,7 @@ export default function CreateListing() {
               type="button"
               disabled={uploading}
               onClick={handleImageSubmit}
-              className="p-3 text-green-700 border border-green-700 rounded uppercase hover:shadow-lg disabled:opacity-80"
+              className="p-3 text-green-600 border border-green-600 rounded uppercase hover:shadow-lg disabled:opacity-80"
             >
               {uploading? 'Uploading...': 'Upload'}
             </button>
@@ -307,7 +307,7 @@ export default function CreateListing() {
               </div>
             ))}
 
-          <button disabled={loading || uploading} className="p-3 bg-slate-700 text-white rounded-lg uppercase hover:opacity-90 disabled:opacity-80">
+          <button disabled={loading || uploading} className="p-3 bg-blue-900 text-white rounded-lg uppercase hover:opacity-90 disabled:opacity-80">
             { loading ? 'Creating...': 'Create Listing'}
           </button>
           {error && <p className="text-red-700 text-sm">{error}</p>}

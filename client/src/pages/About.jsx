@@ -4,7 +4,7 @@ export default function About() {
   return (
     <div className="py-20 px-4 max-w-6xl mx-auto">
       <div className="text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-950">About Urban Nest</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-900">About Urban Nest</h1>
         <p className="text-lg md:text-xl mb-8 text-gray-700">
           Urban Nest is a leading real estate agency specializing in helping clients buy, sell, and rent properties in desirable neighborhoods. Our experienced agents are dedicated to providing exceptional service and making the buying and selling process smooth.
         </p>
@@ -16,9 +16,9 @@ export default function About() {
         </p>
       </div>
       <div className="mt-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-blue-950">Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-gray-100 p-6 rounded-lg">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-blue-900">Our Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
+          <div className="bg-gray-100 p-6 rounded-lg border border-slate-500 ">
             <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800">Buying</h3>
             <p className="text-gray-700">
               Looking to buy your dream home? Our expert agents will guide you through the entire process, from finding the perfect property to negotiating the best deal.
@@ -29,7 +29,7 @@ export default function About() {
               <li>Assistance with financing and mortgage options</li>
             </ul>
           </div>
-          <div className="bg-gray-100 p-6 rounded-lg">
+          <div className="bg-gray-100 p-6 rounded-lg border border-slate-500">
             <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800">Selling</h3>
             <p className="text-gray-700">
               Ready to sell your property? Let us handle the process for you. Our dedicated team will market your property effectively and negotiate the best price on your behalf.
@@ -40,7 +40,7 @@ export default function About() {
               <li>Expert negotiation skills to maximize your sale price</li>
             </ul>
           </div>
-          <div className="bg-gray-100 p-6 rounded-lg">
+          <div className="bg-gray-100 p-6 rounded-lg border border-slate-500">
             <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-800">Renting</h3>
             <p className="text-gray-700">
               Need to find the perfect rental property? We've got you covered. Our team will help you navigate the rental market and find a property that meets your needs and budget.
