@@ -62,7 +62,7 @@ export default function Header() {
                 src={currentUser.avatar}
                 alt='profile'
               />
-              ): (<li className="text-white hover:underline">Sign in</li>
+              ): (<li className="font-semibold text-white hover:underline">Sign in</li>
             )}
             </Link>
             
